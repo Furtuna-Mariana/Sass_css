@@ -1,0 +1,60 @@
+@mixin normalText ($color: red, $w:150px, $h:150px) {
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color;
+    width: $w;
+    height: $h;
+}
+
+@mixin boldText {
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+@mixin title {
+    font-size: 2rem;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+@mixin phone {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
+
+
+.class1 {
+    @include normalText;
+    border: 1px solid black;
+
+    @include phone {
+        color: aqua;
+        font-size: 0.5rem;
+    }
+    
+}
+
+.class2 {
+    @include boldText;
+    border: 1px solid black;
+    
+    @include phone {
+        color: orange;
+        font-size: 0.5rem;
+    }
+}
+
+.class3 {
+    @include title;
+    border: 1px solid black;
+    
+}
+
+.class4 {
+    border: 1px solid black;
+    
+}

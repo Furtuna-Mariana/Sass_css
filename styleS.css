@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&d=swap);
+:root {
+        --main-text-color: black;
+        --secondary-text-color: black;
+
+}
+
+.p1 {
+        font-family:'Roboto', sans-serif;
+        color: var(--main-text-color);
+        font-size: 2rem;
+   }
+
+.p2 {
+        font-size: 2rem;
+        color: var(--secondary-text-color);
+}
+
+@media only screen and (max-width: 780px) {
+      .p1 {
+        color: red;
+        font-size: 1rem;
+      }  
+
+      .p2 {
+        color: yellow;
+        font-size: 1rem;
+      }
+}
+
+@media only screen and (max-width: 400px) {
+        .p1 {
+          color: red;
+          font-size: 1rem;
+        }  
+  
+        .p2 {
+          color: yellow;
+          font-size: 1rem;
+        }
+  }
